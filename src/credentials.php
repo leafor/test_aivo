@@ -11,6 +11,6 @@ $url ='http://leandro-macbook-air.local/dashboard/01_Trabajos/test_aivo/src/fb-c
 
   $script_url = 'routes.php';  
   $fb_apikey = '133399547192677';  
-  $fb_secret = '6d1166ff7978c3bb4680f06010f2ea17';  
+  $fb_secret = 'aa3349f4fcb596f8ec7010513905e4a0';  
 
 ?>

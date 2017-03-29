@@ -21,18 +21,13 @@ try {
   echo 'Facebook SDK returned an error: ' . $e->getMessage();
   exit;
 }
-
+$response=null;
 if (isset($accessToken)) {
   // Logged in!
   $_SESSION['facebook_access_token'] = (string) $accessToken;
-  $response = $fb->get('/'.$_GET["id"].'?fields=first_name,last_name', $accessToken);
-  echo $response->getGraphUser();
-  // Now you can redirect to another page and use the
-  // access token from $_SESSION['facebook_access_token']
-  //$jsonFb = file_get_contents("https://graph.facebook.com/".$_GET["id"]."?access_token=".(string)$accessToken);
- //header('Content-type: application/json');
-   // echo ($jsonFb);
+  header("Location: leandro-macbook-air.local/dashboard/01_Trabajos/test_aivo/public/index.php/profile/Facebook/".$_GET["id"].".php ");
 }
+
 
 
 ?>

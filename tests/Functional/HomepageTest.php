@@ -17,6 +17,19 @@ class HomepageTest extends BaseTestCase
     }
 
     /**
+     * Test AIVO
+     */
+    public function testAivo()
+    {
+        $response = $this->runApp('GET', '/profile/Facebook/1285202074');
+
+        $this->assertEquals(200, $response->getStatusCode());
+        $this->assertContains('"id":"1285202074"', (string)$response->getBody());
+        $this->assertNotContains('Hello', (string)$response->getBody());
+    }
+
+
+    /**
      * Test that the index route with optional name argument returns a rendered greeting
      */
     public function testGetHomepageWithGreeting()
