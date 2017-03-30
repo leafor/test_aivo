@@ -18,8 +18,8 @@ $app->get('/profile/Facebook/{id}', function ($request, $response, $args) {
 		$permissions = ['user_about_me']; // optional
 		
 		$loginUrl = $helper->getLoginUrl('http://leandro-macbook-air.local/dashboard/01_Trabajos/test_aivo/src/fb-callback.php?id='.$id, $permissions);
-		echo $loginUrl;
-		//echo "<SCRIPT>window.location='".$loginUrl."';</SCRIPT>"; 
+		//echo $loginUrl;
+		echo "<SCRIPT>window.location='".$loginUrl."';</SCRIPT>"; 
 		//echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';  
 		//echo file_get_contents($loginUrl);
   	}
